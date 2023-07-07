@@ -1,0 +1,34 @@
+<div class="container-fluid background">
+  <div class="row RowCenterOne">
+    <div class="col">
+      <p>Random User</p>
+    </div>
+  </div>
+  <div class="row RowCenterTwo" *ngIf="UserInfo.length != 0">
+    <div class="col-5">
+      <div class="card">
+        <ngx-spinner type="ball-scale-multiple" *ngIf="isLoading" ></ngx-spinner>
+        <div class="card-header headerText">
+          <img src={{UserInfo.picture.large}} class="img-circular" alt="" srcset="" />
+        </div>
+        <div class="card-body cardBody">
+
+          <div class="row text-center">
+            <div class="col-12 text-muted">
+              Hello, My name is
+            </div>
+            <div class="col-12 nameText">
+              {{UserInfo.name.first}} {{UserInfo.name.last}}
+            </div>
+          </div>
+
+          <div class="BottomSide mt-5">
+            <button type="button" (click)="randomApiCall()" class="btn btn-circle btn-xl redoBtn">
+              <fa-icon [icon]="redo"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

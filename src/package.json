@@ -1,0 +1,8 @@
+{
+    "name": "angular-cli-electron",
+    "productName": "AngularDesktopApp",
+    "version": "1.0.0",
+    "description": "Desktop app for Random User Generator",
+    "main": "electron.prod.js",
+    "license": "MIT"
+}
